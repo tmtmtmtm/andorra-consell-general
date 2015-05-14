@@ -38,7 +38,7 @@ page.css('div#content-core div.tileItem').drop(1).each do |p|
     email: dep.at_css('div.email span').text.strip,
     birth_date: datefrom(dep.at_css('div.datanaixement span').text.strip).to_s,
     image: dep.at_css('div.foto img/@src').text,
-    start_date: datefrom(dep.at_css('div.dataeleccio span').text.strip).to_s,
+    election_date: datefrom(dep.at_css('div.dataeleccio span').text.strip).to_s,
     term: 2015,
     source: p_url,
   }
