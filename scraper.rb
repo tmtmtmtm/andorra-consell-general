@@ -4,6 +4,7 @@
 require 'date'
 require 'nokogiri'
 require 'open-uri'
+require 'scraped'
 require 'scraperwiki'
 
 # require 'pry'
@@ -18,16 +19,12 @@ def datefrom(date)
   Date.parse(date)
 end
 
-def scrape_list(url)
-  page = noko(url)
-  added = 0
-
-  page.css('div#content-core div.tileItem').drop(1).each do |p|
-    p_url = p.at_css('h3 a/@href').text
-    scrape_member(p_url)
-    added += 1
+class MemberListPage < Scraped::HTML
+  field :member_urls do
+    noko.css('div#content-core div.tileItem').drop(1).map do |p|
+      p.at_css('h3 a/@href').text
+    end
   end
-  puts "  Added #{added} members"
 end
 
 def scrape_member(url)
@@ -48,4 +45,9 @@ def scrape_member(url)
   ScraperWiki.save_sqlite([:id, :term], data)
 end
 
-scrape_list 'http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals'
+list = 'http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals'
+page = MemberListPage.new(response: Scraped::Request.new(url: list).response)
+page.member_urls.each do |url|
+  scrape_member(url)
+end
+
