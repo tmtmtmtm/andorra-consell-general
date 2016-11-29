@@ -7,9 +7,10 @@ require 'open-uri'
 require 'scraped'
 require 'scraperwiki'
 
-require 'pry'
-require 'open-uri/cached'
-OpenURI::Cache.cache_path = '.cache'
+# require 'pry'
+# require 'open-uri/cached'
+# OpenURI::Cache.cache_path = '.cache'
+require 'scraped_page_archive/open-uri'
 
 class MemberListPage < Scraped::HTML
   field :member_urls do
@@ -65,7 +66,6 @@ list = 'http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals'
 page = MemberListPage.new(response: Scraped::Request.new(url: list).response)
 page.member_urls.each do |url|
   data = MemberPage.new(response: Scraped::Request.new(url: url).response).to_h
-  puts data
   ScraperWiki.save_sqlite([:id, :term], data)
 end
 
