@@ -41,7 +41,7 @@ page.css('div#content-core div.tileItem').drop(1).each do |p|
   }
   puts data
   added += 1
-  ScraperWiki.save_sqlite([:name, :term], data)
+  ScraperWiki.save_sqlite([:id, :term], data)
 end
 puts "  Added #{added} members"
 
