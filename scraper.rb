@@ -1,20 +1,17 @@
 #!/bin/env ruby
 # encoding: utf-8
 
-require 'scraperwiki'
+require 'date'
 require 'nokogiri'
-require 'date'
 require 'open-uri'
-require 'date'
+require 'scraperwiki'
 
-# require 'colorize'
-# require 'pry'
-# require 'csv'
-# require 'open-uri/cached'
-# OpenURI::Cache.cache_path = '.cache'
+# require 'pry'
+require 'open-uri/cached'
+OpenURI::Cache.cache_path = '.cache'
 
 def noko(url)
-  Nokogiri::HTML(open(url).read) 
+  Nokogiri::HTML(open(url).read)
 end
 
 def datefrom(date)
@@ -30,7 +27,7 @@ added = 0
 page.css('div#content-core div.tileItem').drop(1).each do |p|
   p_url = p.at_css('h3 a/@href').text
   dep = noko(p_url)
-  data = { 
+  data = {
     id: p_url.split('/').last,
     name: dep.at_css('h1#parent-fieldname-title').text.strip,
     area: dep.at_css('div.electe span').text.strip,
