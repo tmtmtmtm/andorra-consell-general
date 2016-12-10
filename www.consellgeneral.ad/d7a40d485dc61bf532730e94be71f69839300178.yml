@@ -18,7 +18,7 @@ response:
     message: OK
   headers:
     Date:
-    - Fri, 09 Dec 2016 05:20:24 GMT
+    - Sat, 10 Dec 2016 04:55:07 GMT
     Server:
     - Zope/(2.13.20, python 2.7.4, linux2) ZServer/1.1
     X-Frame-Options:
@@ -32,7 +32,7 @@ response:
     Expires:
     - Sat, 01 Jan 2000 00:00:00 GMT
     X-Varnish:
-    - '919169911'
+    - '919193184'
     Age:
     - '0'
     Via:
@@ -46,4 +46,4 @@ response:
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Fri, 09 Dec 2016 05:20:24 GMT
+recorded_at: Sat, 10 Dec 2016 04:55:07 GMT
