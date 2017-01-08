@@ -3,12 +3,10 @@
 # frozen_string_literal: true
 
 require 'date'
-require 'nokogiri'
-require 'open-uri'
+require 'pry'
 require 'scraped'
 require 'scraperwiki'
 
-# require 'pry'
 # require 'open-uri/cached'
 # OpenURI::Cache.cache_path = '.cache'
 require 'scraped_page_archive/open-uri'
