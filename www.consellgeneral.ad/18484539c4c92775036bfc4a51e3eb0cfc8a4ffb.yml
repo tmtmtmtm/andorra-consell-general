@@ -18,7 +18,7 @@ response:
     message: OK
   headers:
     Date:
-    - Mon, 20 Mar 2017 11:57:23 GMT
+    - Tue, 21 Mar 2017 19:46:34 GMT
     Server:
     - Zope/(2.13.20, python 2.7.4, linux2) ZServer/1.1
     X-Ua-Compatible:
@@ -32,7 +32,7 @@ response:
     X-Frame-Options:
     - SAMEORIGIN
     X-Varnish:
-    - '1581345835'
+    - '1581382331'
     Age:
     - '0'
     Via:
@@ -46,4 +46,4 @@ response:
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Mon, 20 Mar 2017 11:57:24 GMT
+recorded_at: Tue, 21 Mar 2017 19:46:34 GMT
