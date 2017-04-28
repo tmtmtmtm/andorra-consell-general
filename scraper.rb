@@ -65,5 +65,5 @@ list = 'http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals'
 page = MemberListPage.new(response: Scraped::Request.new(url: list).response)
 page.member_urls.each do |url|
   data = MemberPage.new(response: Scraped::Request.new(url: url).response).to_h
-  ScraperWiki.save_sqlite(%i(id term), data)
+  ScraperWiki.save_sqlite(%i[id term], data)
 end
