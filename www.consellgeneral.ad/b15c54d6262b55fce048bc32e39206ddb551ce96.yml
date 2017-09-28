@@ -18,7 +18,7 @@ response:
     message: OK
   headers:
     Date:
-    - Wed, 27 Sep 2017 17:21:56 GMT
+    - Thu, 28 Sep 2017 23:02:17 GMT
     Server:
     - Zope/(2.13.20, python 2.7.4, linux2) ZServer/1.1
     Expires:
@@ -32,7 +32,7 @@ response:
     X-Ua-Compatible:
     - IE=edge,chrome=1
     X-Varnish:
-    - '80205669'
+    - '80258288'
     Age:
     - '0'
     Via:
@@ -46,4 +46,4 @@ response:
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Wed, 27 Sep 2017 17:21:57 GMT
+recorded_at: Thu, 28 Sep 2017 23:02:17 GMT
