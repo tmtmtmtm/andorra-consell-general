@@ -398,9 +398,30 @@ Membre de la Comissió Legislativa d'Economia (gener 2018 - )
 	<div id="image_wrap">
 		<img width="190" alt="Maria Martisella González" src="http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals/maria-martisella-gonzalez-1/foto" />
 	</div>
-	
-
+	<div class="items">
+		<div class="item"><img src="http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals/maria-martisella-gonzalez-1/foto" /></div>
+		<div class="item"><img src="http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals/maria-martisella-gonzalez-1/foto1" /></div>
+		<div class="item"><img src="http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals/maria-martisella-gonzalez-1/foto2" /></div>
+		
 	</div>
+
+	<script type="text/javascript">
+	$(function() {
+	$(".items img").click(function() {
+		if ($(this).hasClass("active")) { return; }
+		var url = $(this).attr("src").replace("", "");
+		var wrap = $("#image_wrap").fadeTo("medium", 0.5);
+		var img = new Image();
+		img.onload = function() {
+			wrap.fadeTo("fast", 1);
+			wrap.find("img").attr("src", url);
+		};
+		img.src = url;
+		$(".items img").removeClass("active");
+		$(this).addClass("active");
+	}).filter(":first").click();
+	});
+</script></div>
         <img class="hemicicle" alt="" width="202" src="++resource++plonetheme.consellgeneral.images/hemicicle/e8.jpg" />
       </div>
 
