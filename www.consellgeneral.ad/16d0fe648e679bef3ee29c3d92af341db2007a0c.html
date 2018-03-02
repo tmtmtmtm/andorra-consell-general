@@ -399,9 +399,30 @@ Membre de la Comissió Legislativa d'Afers Socials (gener 2018 - fins a l'actual
 	<div id="image_wrap">
 		<img width="190" alt="Carine Montaner Raynaud" src="http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals/carine-montaner-raynaud/foto" />
 	</div>
-	
-
+	<div class="items">
+		<div class="item"><img src="http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals/carine-montaner-raynaud/foto" /></div>
+		<div class="item"><img src="http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals/carine-montaner-raynaud/foto1" /></div>
+		<div class="item"><img src="http://www.consellgeneral.ad/ca/composicio-actual/consellers-generals/carine-montaner-raynaud/foto2" /></div>
+		
 	</div>
+
+	<script type="text/javascript">
+	$(function() {
+	$(".items img").click(function() {
+		if ($(this).hasClass("active")) { return; }
+		var url = $(this).attr("src").replace("", "");
+		var wrap = $("#image_wrap").fadeTo("medium", 0.5);
+		var img = new Image();
+		img.onload = function() {
+			wrap.fadeTo("fast", 1);
+			wrap.find("img").attr("src", url);
+		};
+		img.src = url;
+		$(".items img").removeClass("active");
+		$(this).addClass("active");
+	}).filter(":first").click();
+	});
+</script></div>
         <img class="hemicicle" alt="" width="202" src="++resource++plonetheme.consellgeneral.images/hemicicle/c10.jpg" />
       </div>
 
