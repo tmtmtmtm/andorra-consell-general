@@ -18,21 +18,21 @@ response:
     message: OK
   headers:
     Date:
-    - Sun, 09 Sep 2018 00:53:56 GMT
+    - Mon, 10 Sep 2018 04:22:14 GMT
     Server:
     - Zope/(2.13.20, python 2.7.4, linux2) ZServer/1.1
-    X-Frame-Options:
-    - SAMEORIGIN
-    X-Ua-Compatible:
-    - IE=edge,chrome=1
-    Expires:
-    - Sat, 01 Jan 2000 00:00:00 GMT
     Content-Type:
     - text/html;charset=utf-8
+    Expires:
+    - Sat, 01 Jan 2000 00:00:00 GMT
     Content-Language:
     - ca
+    X-Ua-Compatible:
+    - IE=edge,chrome=1
+    X-Frame-Options:
+    - SAMEORIGIN
     X-Varnish:
-    - '1720826810'
+    - '1720919503'
     Age:
     - '0'
     Via:
@@ -42,8 +42,8 @@ response:
     Vary:
     - Accept-Encoding,User-Agent
     Content-Length:
-    - '8273'
+    - '8253'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Sun, 09 Sep 2018 00:53:56 GMT
+recorded_at: Mon, 10 Sep 2018 04:22:14 GMT
